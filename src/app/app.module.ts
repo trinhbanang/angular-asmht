@@ -11,12 +11,12 @@ import { HomeComponent } from './fronend/home/home.component';
 import { DashboardComponent } from './backend/dashboard/dashboard.component';
 import { ProductManagerComponent } from './backend/product-manager/product-manager.component';
 import { ShopComponent } from './fronend/shop/shop.component';
-import { ProductService } from './services/product.service';
+
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, AdminComponent, HomeComponent, DashboardComponent, ProductManagerComponent, ShopComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ProductService]
+  providers: []
 })
 export class AppModule { }
