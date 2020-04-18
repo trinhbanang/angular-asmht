@@ -29,22 +29,14 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+        <tr *ngFor="let product of products; index as i">
+      <th scope="row">{{i}}</th>
+      <td><a routerLink="/product/detail/{{product.id}}">{{product.name}}</a></td>
+      <td>{{product.price}}</td>
+      <td width="200" class="text-right">
+        <button class="btn btn-primary" routerLink="/product/edit/{{product.id}}">Edit</button>
+        <button class="btn btn-danger ml-2"  (click)="removeItem(product.id)">Remove</button>
+      </td>
     </tr>
   </tbody>
 </table>
