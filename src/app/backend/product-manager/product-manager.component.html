@@ -1,50 +1,52 @@
-  <nav aria-label="breadcrumb">
-      <ol class="breadcrumb my-breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-      </ol>
-    </nav>
-    <div class="welcome-msg pt-3 pb-4">
-      <h1>Hi <span class="text-primary">John</span>, Welcome back</h1>
-      <p>Very detailed & featured admin.</p>
-    </div>
-        <div class="accordions">
-      <div class="row">
-        <!-- accordion style 1 -->
-        <div class="col-lg-12 mb-4">
-          <div class="card card_border">
-            <div class="card-header chart-grid__header">
-              Product Manager
-            </div>
-            <div class="card-body">
-              <div class="accordion" id="accordionExample">
-                <div class="card">
-                    <table class="table table-hover table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-        <tr *ngFor="let product of products; index as i">
-      <th scope="row">{{i}}</th>
-      <td><a routerLink="/product/detail/{{product.id}}">{{product.name}}</a></td>
-      <td>{{product.price}}</td>
-      <td width="200" class="text-right">
-        <button class="btn btn-primary" routerLink="/product/edit/{{product.id}}">Edit</button>
-        <button class="btn btn-danger ml-2"  (click)="removeItem(product.id)">Remove</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- //accordion style 1 -->
-      </div>
-    </div>
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb my-breadcrumb">
+		<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+	</ol>
+</nav>
+<div class="welcome-msg pt-3 pb-4">
+	<h1>Hi <span class="text-primary">John</span>, Welcome back</h1>
+	<p>Very detailed & featured admin.</p>
+</div>
+<div class="accordions">
+	<div class="row">
+		<!-- accordion style 1 -->
+		<div class="col-lg-12 mb-4">
+			<div class="card card_border">
+				<div class="card-header chart-grid__header">
+					Product Manager
+				</div>
+
+				<div class="card-body">
+					<div class="accordion" id="accordionExample">
+						<div class="card">
+							<table class="table table-hover table-dark">
+
+								<thead>
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">First</th>
+										<th scope="col">Last</th>
+										<th scope="col">Handle</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr *ngFor="let product of products; index as i">
+										<th scope="row">{{i}}</th>
+										<td><a routerLink="/product/detail/{{product.id}}">{{product.name}}</a></td>
+										<td>{{product.price}}</td>
+										<td width="200" class="text-right">
+											<button class="btn btn-primary" routerLink="/product/edit/{{product.id}}">Edit</button>
+											<button class="btn btn-danger ml-2"  (click)="removeItem(product.id)">Remove</button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //accordion style 1 -->
+	</div>
+</div>
